@@ -3,9 +3,6 @@
 A custom **Over-The-Air (OTA)** firmware update system for the **ESP32-CAM**
 that uses a **single `factory` partition (~4/8/16 MB)** instead of the standard dual OTA-partition scheme. The firmware downloads a new binary over WiFi, stores it in PSRAM, then overwrites its own flash partition from an IRAM-only routine — no secondary `ota_1` partition, and no wasted flash.
 
-> ⚠️ A failed write (power loss, crash) will require a reflash via USB. 
-> Read `IRAM_FLASH.md` for the full technical rationale and risks.
-
 ---
 
 ## How It Works
@@ -166,9 +163,5 @@ For a deeper breakdown, read [`IRAM_FLASH.md`](IRAM_FLASH.md).
 
 ---
 
-## License
-
-This project is licensed under the **GNU Affero General Public License v3.0**
-([AGPLv3](LICENSE)). If you run a modified version of this firmware on a
-device that users interact with over a network, you must make the source
-code available to those users.
+> ⚠️ A failed write (power loss, crash) will require a reflash via USB. 
+> Read `IRAM_FLASH.md` for the full technical rationale and risks.
