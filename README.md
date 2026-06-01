@@ -54,7 +54,6 @@ OTA_ESP/
 ├── dry_run_flash.py              # Simulator — walks through the flash process
 ├── verify_binary_header.py       # Validates firmware.bin magic byte (0xE9)
 ├── IRAM_FLASH.md                 # Deep-dive: IRAM approach, risks, constraints
-├── discussion.md                 # Original technical discussion / design log
 ├── LICENSE                       # GNU AGPLv3
 └── README.md                     # This file
 ```
