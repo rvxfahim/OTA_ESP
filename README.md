@@ -150,7 +150,7 @@ application, unlike the standard ESP32 OTA scheme that requires `ota_0`,
 
 ## ⚠️ Risks & Caveats
 
-- **No rollback.** If the flash write is interrupted, the device is bricked.
+- **No rollback.** If the flash write is interrupted, the device will need to be reflashed via USB. There is no secondary partition to boot from.
 - **Single partition.** `ota_0`/`ota_1`/`otadata` are not used; the firmware overwrites itself directly.
 - **IRAM constraints.** The flash routine runs with interrupts disabled,
   scheduler suspended, and the other core parked. Standard `Serial.print()`
